@@ -6,7 +6,8 @@
   "license": "ISC",
   "scripts": {
     "preinstall": "node ./scripts/preinstall.js",
-    "eslint:check": "eslint packages/*.js"
+    "eslint:check": "eslint packages/*.js",
+    "prepare": "husky install"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
@@ -15,11 +16,12 @@
   },
   "husky": {
     "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+      "pre-commit": "lint-staged"
     }
   },
   "devDependencies": {
     "eslint": "^8.41.0",
+    "husky": "^8.0.3",
     "turbo": "^1.7.3"
   }
 }
