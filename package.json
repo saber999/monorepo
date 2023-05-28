@@ -5,8 +5,13 @@
   "author": "gonghao",
   "license": "ISC",
   "scripts": {
-    "preinstall": "node ./scripts/preinstall.js"
-   },   
+    "preinstall": "node ./scripts/preinstall.js",
+   },
+   "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
   "devDependencies": {
     "turbo": "^1.7.3"
   }
