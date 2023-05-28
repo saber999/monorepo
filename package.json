@@ -1,0 +1,13 @@
+{
+  "version": "1.0.0",
+  "description": "组件库",
+  "keywords": [],
+  "author": "gonghao",
+  "license": "ISC",
+  "scripts": {
+    "preinstall": "node ./scripts/preinstall.js"
+   },   
+  "devDependencies": {
+    "turbo": "^1.7.3"
+  }
+}
